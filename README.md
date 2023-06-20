@@ -1,4 +1,4 @@
-# bitcoin-stats
+# bitcoin_stats
 Various Bitcoin statistic that I wanted, but not able to find anywhere.
 
 ## dominance.py
