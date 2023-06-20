@@ -35,7 +35,7 @@ class CoinGeckoMarketCap:
 
 def main():
     # argv parsing
-    output_file = 'index'
+    output_file = 'bitcoin_dominance'
     if len(sys.argv) == 2 :
         output_file = sys.argv[1]
         
