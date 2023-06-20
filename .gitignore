@@ -7,5 +7,5 @@ venv*
 # Personal Visual Studio Code settings
 .vscode/settings.json
 
-# output file
-index.html
+# output files
+*.html
