@@ -1,4 +1,4 @@
-#import pprint
+import pprint
 import sys
 import urllib.request
 import json
@@ -20,8 +20,8 @@ class BinancePrice:
 
         data = response.read().decode()
         json_data = json.loads(data)
-
-        #pprint.pprint(json_data)
+        self.json_data = pprint.pformat(json_data) # for DEBUG
+        #pprint.pprint(self.json_data)
 
         for asset in json_data:
             if asset['symbol'] == 'BTCUSDT':
@@ -78,6 +78,14 @@ def main():
     ps.row(
         ps.colxl(align='center', type='box', content=ps.link('https://github.com/sasa-buklijas/bitcoin_dominance',
                                                             'Code available on GitHub'))
+    )
+
+    ps.row(
+        ps.colxl(align='center', type='box', content=ps.p('For DEBUG only'))
+    )
+    ps.row(
+        ps.colxl(align='center', type='box', 
+                content=ps.p(f'<pre>{bitcoin_price.json_data}</pre>'))
     )
 
 
