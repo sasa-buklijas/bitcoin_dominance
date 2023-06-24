@@ -41,7 +41,8 @@ def main():
 
     generated_at = datetime.now()
     time_zone = datetime.now().astimezone().tzname()
-    title = f'Generated at {generated_at} {time_zone}'
+    data_from = bitcoin_price._URL.split('/')[2]
+    title = f'Generated at {generated_at} {time_zone} data from {data_from}'
     ps.row(
         ps.colxl(type='box', content=ps.p(title))
     )
