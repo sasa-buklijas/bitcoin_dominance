@@ -17,6 +17,11 @@ class CoinGeckoMarketCap:
 
     def __init__(self):
         response = urllib.request.urlopen(self._URL)
+
+        if response.getcode() != 200:
+            print(f'{response.getcode()=} not 200')
+            exit()
+
         data = response.read().decode()
         json_data = json.loads(data)
 
